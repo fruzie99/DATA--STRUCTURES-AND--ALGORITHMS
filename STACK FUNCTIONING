@@ -1,0 +1,58 @@
+#include<stdio.h>
+int n,c,top=-1;
+int stack[99];
+void push();
+void pop();
+void display();
+int main()
+{
+printf("\nEnter the maximum size of the stack\n");
+scanf("%d",&n);
+
+do{
+printf("\n1.Push   2.Pop  3.Display  4.Exit\n");
+printf("\nChoose your option:");
+scanf("%d",&c);
+switch(c)
+{
+case 1:push();break;
+case 2:pop();break;
+case 3:display();break;
+case 4:printf("\n----   THE EXIT   ----");break;
+}
+}while(c!=4);
+
+}
+void push()
+{
+    if(top==n-1)
+    printf("--STACK OVERFLOW--\n");
+    else
+    {
+    top++;
+    
+    printf("\nEnter the value you wanna push into the stack: ");
+    scanf("%d",&stack[top]);
+      
+    }
+
+}
+void pop()
+{
+if(top==-1)
+printf("--STACK UNDERFLOW--\n");
+else
+{
+
+printf("the popped element is: %d ",stack[top]);
+top--;
+}
+}
+void display()
+{
+	int i;
+for(i=0;i<=top;i++)
+{
+printf("%d   \n",stack[i]);
+}
+}
