@@ -1,3 +1,5 @@
+#this stack has pop push and display options as a menu driven programme
+
 #include<stdio.h>
 int n,c,top=-1;
 int stack[99];
